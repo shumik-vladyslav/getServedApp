@@ -1,0 +1,123 @@
+page-booking-confirmation {
+    .confirm-tick {
+        text-align: center;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .light-text {
+        color: #fff;
+    }
+
+    ion-header {
+        background-image: linear-gradient($light-green, $dark-green);
+      
+        .col {
+            padding: 0px;
+        }
+    }
+    
+    .toolbar-background {
+        background: transparent !important;
+    }
+
+    .booking-text {
+        font-size: 22px;
+    }
+
+    ion-card-header {
+        border-bottom: 1px solid #a7a5a5 !important;
+    }
+
+    .orange-text {
+        color: #ff7f00;
+    }
+
+    .gray-text {
+        color: $gray;
+    }
+
+    .heading {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .booking-id {
+        font-size: 12px;
+    }
+
+    .bold-text {
+        font-weight: bold;
+    }
+
+    .address {
+        color: $gray;
+        font-size: 12px;
+    }
+
+    .restaurant {
+        padding-left: 15px !important;
+        padding-right: 8px !important;
+    }
+    .margin-top {
+        margin-top: 15px;
+    }
+
+    .meal-booking-heading {
+        color: $gray;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .direction-button {
+        border-radius: 8px;
+        background-color: #1c1d32;
+        color: #fff;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 16px;
+        height: 28px;
+    }
+
+    .direction-button:hover {       
+        background-color: #fff !important;
+        color: #1c1d32;
+        border: 1px solid #1c1d32;
+    }
+
+    .meal-booking-button-div button {
+        border-radius: 5px;
+        background-color: #ff7f00;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .back-link {
+        color: $light-green;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .confirm-tick {
+        margin-top: -12px;
+        ion-icon {
+            color: #ff7f00;
+            font-size: 65px;
+        }
+    }
+
+    .padding {
+        padding: 10px;
+    }
+
+    .location-img{
+        height: 14px;
+        width: 10px;
+        display: inline;
+    }
+}

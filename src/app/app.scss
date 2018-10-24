@@ -1,0 +1,149 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import "assets/scss/style.scss";
+
+
+@font-face {
+    font-family: 'AvenirRoman';
+    src: url("../assets/fonts/AvenirLTStd-Roman.otf") format("opentype");
+}
+.gradient-primary{
+  background-image: $gradient-primary;  
+}
+.content{
+  color: #494949;
+}
+.item {
+  color: #494949;
+}
+.c-p{
+  cursor: pointer;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-400{
+  font-weight: 400;
+}
+.l-s-1{
+  letter-spacing: 1px;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.b-r-50{
+  border-radius: 50%;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: $normal-green;
+}
+.pen-icon{
+  font-size: 14px;
+  margin-left: 10px;
+}
+* {
+    // font-family: 'AvenirRoman', Roboto, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.toolbar-background {
+    background-image: linear-gradient($light-green, $dark-green) !important;
+  }
+
+  .toolbar-content, .toolbar-title {
+    color: #fff !important;
+  }
+
+  ion-header ion-icon.back-button-icon.icon {
+    color: #fff;
+}
+
+  ::-webkit-scrollbar { 
+    display: none; 
+}
+
+ion-card {
+  box-shadow: 0px 0px 4px 1px #dedede !important;
+}
+.back-button-text{
+  display: none;
+}
+.toolbar-ios ion-title{
+  padding: 0 9px 1px !important;
+}
+
+ion-icon {
+  &[class*="custom-"] {
+      margin: 0 5px 0 0;
+      vertical-align: middle;
+      $sz: 20px;
+      width: $sz;
+      height: $sz;
+  } // custom icons
+  &[class*="home"] {
+    background: url(../assets/SVG/home.svg) no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &[class*="location"] {
+      background: url(../assets/SVG/map_location.svg) no-repeat 50% 50%;
+      background-size: contain;
+  }
+  &[class*="store"] {
+    background: url(../assets/SVG/store.svg) no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &[class*="profile"] {
+    background: url(../assets/SVG/user_bg.svg) no-repeat 50% 50%;
+    background-size: contain;
+  }
+}
+.tab-button[aria-selected="true"]{
+  ion-icon {
+    &[class*="custom-"] {
+        margin: 0 5px 0 0;
+        vertical-align: middle;
+        $sz: 20px;
+        width: $sz;
+        height: $sz;
+    } // custom icons
+    &[class*="home"] {
+        background: url(../assets/SVG/home_active.svg) no-repeat 50% 50%;
+        background-size: contain;
+    }
+    &[class*="location"] {
+        background: url(../assets/SVG/map_location.svg) no-repeat 50% 50%;
+        background-size: contain;
+    }
+    &[class*="store"] {
+      background: url(../assets/SVG/store.svg) no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="profile"] {
+      background: url(../assets/SVG/user_active.svg) no-repeat 50% 50%;
+      background-size: contain;
+    }
+  }
+}

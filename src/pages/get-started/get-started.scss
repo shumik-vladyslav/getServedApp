@@ -1,0 +1,71 @@
+page-get-started {
+    .scroll-content {
+        overflow-y: auto !important;
+    }
+    .content {
+        background-color: #fff;
+        background: url('../assets/imgs/bg.jpg');
+        background-size: 100% 100%;
+        color: $normal-green;
+        align-content: center;
+        margin: auto;
+    }
+    .logo {
+        margin: auto;
+        margin-top: 40px;
+        // width: 160px;
+        height: 160px;
+        float: none;
+    }
+    .bottom-section {
+        margin-top: 35%;
+        ion-col {
+            text-align: center;
+        };
+        .social-button {
+            width: 100%;
+            min-height: 40px;
+            background: #fff;
+            color: rgb(253, 88, 23);
+            border-radius: 5px;
+        };
+    }
+    hr {
+        background-color: $normal-green !important;
+    }
+    .signup-button {
+        background-color: transparent;
+        color: $normal-green;
+        border: 1px solid  $normal-green ;
+        padding: 15px;
+        width: 100%;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        // margin-top: 10px;
+    }
+    .signup-button:active {
+        background-color: $normal-green;
+        color: #fff;
+    }
+    .bottom-line {
+        margin: auto;
+        margin-top: 18px;
+        font-weight: normal;
+        a:visited, a:active, a {
+            color: $normal-green !important;
+        }
+    }
+    .get-started-text {
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .bottom-area {
+        // position: absolute;
+        bottom: 62px;
+        width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+}

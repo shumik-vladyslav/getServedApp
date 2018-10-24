@@ -1,0 +1,172 @@
+<!--
+  Generated template for the ProceedToPaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>2 Items in your cart</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-row class="upper-row">
+    <ion-col>
+
+      <ion-card>
+        <ion-card-content>
+
+          <ion-row>
+            <ion-col>
+              <div class="booking-text-box">
+                <div class="booking-text">Booking For</div>
+              </div>
+            </ion-col>
+
+            <ion-col class="orderBy">
+              <div class="booking-text-box">
+                <div class="booking-text fs-16">Harkirat Singh at Indian Villa</div>
+              </div>
+            </ion-col>
+          </ion-row>
+
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="bill-desc">
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+
+          <ion-row>
+            <ion-col col-5 class="right-align">
+              <div>Mushroom Pizza</div>
+              <div class="sub-text">(Medium)</div>
+            </ion-col>
+            <ion-col col-1></ion-col>
+
+            <ion-col col-2 class="right-align fs-14">
+              x2
+            </ion-col>
+
+            <ion-col col-3 class="right-align fs-14">
+              ₹900
+            </ion-col>
+
+            <ion-col col-1>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-5 class="right-align">
+              <div>Mushroom Pizza</div>
+              <div class="sub-text">(Large)</div>
+            </ion-col>
+            <ion-col col-1></ion-col>
+
+            <ion-col col-2 class="right-align fs-14">
+              x1
+            </ion-col>
+
+            <ion-col col-3 class="right-align fs-14">
+              ₹600
+            </ion-col>
+
+            <ion-col col-1>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <hr>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-5 class="right-align">
+              SGST
+            </ion-col>
+            <ion-col col-1></ion-col>
+
+            <ion-col col-2 class="right-align fs-14">
+              8%
+            </ion-col>
+
+            <ion-col col-3 class="right-align fs-14">
+              ₹40
+            </ion-col>
+
+            <ion-col col-1>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-5 class="right-align">
+              CGST
+            </ion-col>
+            <ion-col col-1></ion-col>
+
+            <ion-col col-2 class="right-align fs-14">
+              8%
+            </ion-col>
+
+            <ion-col col-3 class="right-align fs-14">
+              ₹40
+            </ion-col>
+
+            <ion-col col-1>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <hr>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-5 class="green-text right-align">
+              Total Amount
+            </ion-col>
+            <ion-col col-3></ion-col>
+
+            <ion-col col-3 class="green-text right-align">
+              ₹1580
+            </ion-col>
+
+            <ion-col col-1>
+            </ion-col>
+          </ion-row>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col class="center-text promo-code">
+        <span *ngIf="!promoCodeToggle" class="promo-text" (click)="togglePromoCode()">Have promo code?</span>
+        <span *ngIf="promoCodeToggle">
+          <ion-item class="promo-input-box">
+            <ion-input autofocus type="text" [(ngModel)]="promoCode" placeholder="Enter promo code.."></ion-input>
+            <ion-icon name="close-circle" item-end (click)="togglePromoCode()"></ion-icon>
+          </ion-item>
+        </span>
+      </ion-col>
+    </ion-row>
+
+</ion-content>
+
+<ion-footer>
+  <button class="proceed-to-button" ion-button block>Proceed To Payment</button>
+</ion-footer>

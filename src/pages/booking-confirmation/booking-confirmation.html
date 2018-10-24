@@ -1,0 +1,99 @@
+<!--
+  Generated template for the BookingConfirmationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    </ion-navbar>
+
+  <ion-row>
+      <ion-col>
+        <div class="confirm-tick">
+            <!-- <ion-icon name="checkmark-circle-outline"></ion-icon> -->
+            <img width="65px" height="65px" src="assets/SVG/booking_confirm.svg" alt="">
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="margin-top">
+      <ion-col>
+        <div class="center-text light-text booking-text">Booking Confirmed !</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="margin-top">
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <div class="center-text heading gray-text">Harkirat Singh</div>
+            <div class="center-text gray-text booking-id">Booking ID: IND7856</div>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row class="margin-top">
+              <ion-col>
+                <div class="center-text orange-text bold-text">Tue, 16 July 2018</div>
+              </ion-col>
+              <ion-col>
+                <div class="center-text orange-text bold-text">Table for</div>
+                <div class="center-text gray-text bold-text">2 People</div>
+              </ion-col>
+              <ion-col>
+                <div class="center-text orange-text bold-text">Afternoon</div>
+                <div class="center-text gray-text bold-text">12:30</div>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="margin-top">
+              <ion-col class="restaurant">
+                  <div class="bold-text gray-text"><img class="location-img" src="assets/SVG/location.svg" alt=""> &nbsp;&nbsp; Indian Villa</div>
+                  <div class="address">SCO 17, 18, C-Block, Ranjit Avenue, Amritsar, Punjab</div>
+              </ion-col>
+              <ion-col col-3>
+                <img style="border-radius: 2px;" src="./assets/imgs/restaurant-default.jpg">
+              </ion-col>
+            </ion-row>
+
+
+            <ion-row class="margin-top">
+              <ion-col>
+                <div class="meal-booking-heading">Would you like to book meal with us?</div>
+                <div class="meal-booking-button-div">
+                  <button ion-button block (click)="goToMealBookingPage()">Book Your Meal</button>
+                </div>
+              </ion-col>
+            </ion-row>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+ 
+
+</ion-header>
+
+
+<ion-content no-bounce>
+
+  <ion-row>
+    <ion-col>
+      <div class="center-text gray-text fs-14">
+        Your booking details are sent as SMS to 989898989 and in email to abc@exammple.com
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="margin-top padding">
+    <ion-col>
+      <div class="back-link" (click)="goBackToHome()">Back To Home</div>
+    </ion-col>
+    <ion-col>
+        <button class="direction-button" ion-button block>
+            <ion-icon name="paper-plane"></ion-icon> &nbsp; Direction
+          </button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

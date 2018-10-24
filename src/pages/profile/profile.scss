@@ -1,0 +1,44 @@
+page-profile {
+
+    ion-list {
+        button {
+            ion-label {
+                color: $gray;
+            }
+        }
+    }    
+
+    ion-title {
+        text-align: center;
+    }
+
+    svg {
+        width: 24px;
+        margin-right: 32px !important;
+        fill: $light-gray;
+    }
+
+    .logout-button {
+        // background-image: linear-gradient($light-green, $dark-green);
+        background-color: $dark-green;
+        height: 4rem !important;
+        font-size: 18px !important;
+        border-radius: 12px;
+        background-image: $gradient-primary;
+    }
+    ion-label{
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .list-item-inside{
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .list-item{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

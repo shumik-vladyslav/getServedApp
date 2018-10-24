@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+
+      <ion-row>
+        <ion-col col-2 class="home-icon">
+          <!-- <ion-icon name="home"></ion-icon> -->
+          <img width="30px" src="assets/SVG/home_header.svg" alt="">
+        </ion-col>
+
+        <ion-col>
+          Current Location <br>
+          <div (click)="goToLocationSearchPage()">Amritsar &nbsp; &nbsp;
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </ion-col>
+
+        <ion-col col-3 class="options-icon">
+          <ion-row nowrap justify-content-end>
+            <ion-icon name="search" class="m-r-20"></ion-icon>
+            <!-- <ion-icon name="options"></ion-icon> -->
+            <img width="21px" height="34px" src="assets/SVG/settings.svg" alt="">
+          </ion-row>
+        </ion-col>
+
+      </ion-row>
+
+
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="search-box">
+    <ion-item class="search">
+      <ion-input type="text" placeholder="Search" (focus)="goToSearchPage()"></ion-input>
+      <ion-icon name="search" color="secondary-2" item-end></ion-icon>
+    </ion-item>
+  </div>
+
+  <!-- <ion-row>
+    <ion-col><ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time"></ion-datetime></ion-col>
+    <ion-col><ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time"></ion-datetime></ion-col>
+    <ion-col><ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time"></ion-datetime></ion-col>
+  </ion-row> -->
+
+  <ion-row nowrap ion-text align-items-center class="bg-white drb-wrappper">
+    <ion-col>
+      <dropdawn class="dd" [data]="monthData" name="Today" (select)="day = $event"></dropdawn>
+    </ion-col>
+    <ion-col>
+      <dropdawn class="dd" [data]="dayData" name="10:30 A.M" (select)="day = $event"></dropdawn>
+    </ion-col>
+    <ion-col>
+      <dropdawn class="yy" [data]="yearData" name="Members" (select)="year = $event"></dropdawn>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid class="card-grid">
+
+    <ion-row>
+      <ion-col>
+
+        <ion-card class="recommendations">
+
+          <div class="card-heading">Recommended</div>
+
+          <ion-card-content>
+
+            <ion-slides slidesPerView="2.2">
+
+              <ion-slide>
+                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
+              </ion-slide>
+
+              <ion-slide>
+                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
+              </ion-slide>
+
+              <ion-slide>
+                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
+              </ion-slide>
+
+              <ion-slide>
+                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
+              </ion-slide>
+
+              <ion-slide>
+                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
+              </ion-slide>
+
+            </ion-slides>
+
+          </ion-card-content>
+
+        </ion-card>
+
+
+
+      </ion-col>
+    </ion-row>
+
+
+    <!-- cusines -->
+    <ion-row>
+      <ion-col>
+
+        <ion-card class="recommendations">
+
+          <ion-row>
+            <ion-col>
+              <div class="card-heading">Cuisines</div>
+            </ion-col>
+            <ion-col col-3>
+              <button ion-button outline color="red" (click)="goToRestaurantList()" small class="view-all-button">View all
+                >>
+              </button>
+            </ion-col>
+          </ion-row>
+
+          <ion-card-content>
+
+            <ion-row>
+
+              <ion-col *ngFor="let cuisine of cuisines" col-4>
+                <cuisine [data]="cuisine"></cuisine>
+              </ion-col>
+
+            </ion-row>
+
+          </ion-card-content>
+
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

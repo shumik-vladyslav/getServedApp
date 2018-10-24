@@ -1,0 +1,92 @@
+page-invite-earn {
+    .ion-header{
+        // background-image: url(../assets/SVG/people.svg) !important;
+        // background-repeat: no-repeat;
+        // background-size: 100% 100%;
+        overflow: hidden;
+        background: #293C4A;
+    }
+    .bg-transparent {
+        background-image: none !important;
+        transition: all 0.8 !important;
+        background: none;
+        .toolbar-background{
+            background-image: none !important;
+            background: none;
+            transition: all 0.8 !important;
+        }
+    }
+    .bg-green {
+        background-image: linear-gradient($light-green, $dark-green) !important;
+        transition: all 0.8 !important;
+    }
+    .img{
+        position: absolute;
+        bottom: 0;
+        height: 210px;
+    }
+    .text-header{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: 210px;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding-bottom: 82px;
+        .caption{
+            font-weight: bold;
+            font-size: 30px;
+            color: #F07D00;
+            margin-bottom: -3px;
+        }
+        .comment{
+            font-size : 14px;
+            color : #21D2C5;
+        }
+    }
+    ion-navbar {
+        z-index: 1;
+        position: relative;
+    }
+    .content-wrap{
+        border: 1px solid #D8D8D8;
+        border-radius: 5px;
+        padding: 10px;
+        color : #575757; 
+    }
+    .button-contacts{
+        background: #21D2C5;
+        color: white;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 3px;
+        -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+        font-family: 'Source Sans Pro', sans-serif;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+    }
+    ion-content{
+        padding: 10px 5px;
+    }
+    .social-item{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        font-weight: 600;
+    }
+    .terms{
+        margin-top: 10px;
+        font-weight : bold;
+        color : #A13528;
+        text-align: center;
+    }
+}

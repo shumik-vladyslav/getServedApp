@@ -1,0 +1,173 @@
+page-meal-booking {
+
+    ion-header {
+        background-image: linear-gradient($light-green, $dark-green);
+      
+        .col {
+            padding: 0px;
+        }
+    }
+    
+    .toolbar-background {
+        background: transparent !important;
+    }
+
+    .dish-title {
+        font-size: 22px;
+        color: $gray;
+        line-height: 2.2;
+        font-weight: bold;
+    }
+
+    .circle-image {
+        border-radius: 50%;
+        border: 2px solid $normal-green;
+        overflow: hidden;
+        width: 55px;
+        height: 55px;
+
+        img {
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    .arrow-icon {
+        line-height: 3.2;
+    }
+
+    .card{
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5) !important;
+        border-radius: 5px;
+        min-height: calc(100vh - 175px);
+    }
+    .wrapper{
+        min-height: calc(100vh - 43px);
+    }
+    .list-wrap{
+        -webkit-box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.2);
+        &:first-child{
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        &:last-child{
+            -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2), 0px -1px 3px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2), 0px -1px 3px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2), 0px -1px 3px 0px rgba(0,0,0,0.2);
+        }
+        ion-item{
+            background-color: #fff0;
+        }
+    }
+    .of-visible{
+        overflow: visible;
+        contain: none;
+        position: relative;
+    }
+    ion-label{
+        overflow: visible;
+        contain: none;
+        position: relative;
+    }
+    .input-wrapper{
+        overflow: visible;
+        contain: none;
+        position: relative;
+    }
+    .item-inner{
+        overflow: visible;
+        contain: none;
+        position: relative;
+    }
+    .drb-wrap .button-wrap .btn{
+        font-size: 14px;
+    }
+    .img-wrap{
+        height: 45px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+    }
+    .button-wrap{
+        padding: 0 !important;
+    }
+    .button-count-wrap{
+        width: 46px;
+        position: absolute;
+        right: -3px;
+        top: 0px;
+        background-image: $gradient-primary;
+        padding: 1px;
+        border-radius: 3px;
+        display: flex;
+        height: 23px;
+    }
+    .count-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1px 3px;
+        border-radius: 2px;
+        background: #f0f0f0;
+        width: 100%;
+    }
+    .btn-add{
+        width: 100%;
+        height: 100%;
+        color: white;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .footer{
+        background: white;
+        height: 40px;
+        ion-row{
+            height: 100%;
+            .final-count{
+                height: 100%;
+                display: inline-flex;
+                align-items: center;
+                width: 120px;
+                justify-content: center;
+                background: #ebebeb;
+                color: color($colors, primary);
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .view-card{
+                width: calc(100% - 120px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 600;
+                color: #2e2e2e;
+                cursor: pointer;
+                ion-icon{
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .list-ios > .item-block:first-child{
+        border-top: none;
+    }
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+        border-bottom: none;
+    }
+
+    .drb-wrap .drb{
+        width: 100px;
+        right: 0;
+    }
+}

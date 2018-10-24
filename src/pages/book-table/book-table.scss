@@ -1,0 +1,253 @@
+page-book-table {
+
+    .date-box {
+        color: $gray;
+
+        .day {
+            font-weight: bold;
+        }
+        .date {
+            width: 28px;
+            height: 28px;
+            margin: auto;
+            line-height: 25px;
+        }
+    }
+
+    .selected-date {
+        background-color: $normal-green;
+        border-radius: 50%;       
+        color: #fff;   
+        background-image: $gradient-primary;     
+    }
+
+    .date-row {
+        ion-col {
+            padding: 0px !important;
+        }
+
+        ion-card {
+            margin: 0px !important;
+            width: 100% !important;
+        }
+    }
+
+    .time-heading {
+        font-weight: bold;
+        text-align: center;
+        font-size: 22px;
+        color: $gray;
+        margin-top: 10px;
+    }
+
+    ion-content {
+        background-color: #fcfcfc !important;
+    }
+
+    .colon {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: gray;
+        /* vertical-align: middle; */
+        line-height: 112px;
+    }
+
+    .time-box-first {
+        // margin: 0px 0px 0px 20px !important;
+        // width: 100% !important;
+    }
+
+    .time-box-second {
+        // margin: 0px 20px 0px 0px !important;
+        // width: 100% !important;  
+    }
+    .time-title {
+        text-align: center;
+        font-weight: bold;
+        color: $gray;
+
+    }
+    .underscore {
+        border-bottom: 2px solid $light-gray;
+        min-width: 18px;
+        min-height: 2px;
+        display: block;
+    }
+    .time-placeholder {
+        text-align: center;
+        font-size: 36px;
+        color: $gray;
+    }
+    .time-placeholder>div {
+        display: inline-block;
+    }
+
+    // .time-placeholder::after {
+    //     position: absolute;
+    //     content: "";
+    //     width: 0;
+    //     height: 0;       
+    //     bottom: 5px;
+    //     left: 50%;
+    //     border-left: 12px solid transparent;
+    //     border-right: 12px solid transparent;
+    //     border-top: 10px solid #000;
+    //     // box-shadow: 0px 0px 4px 1px #dedede !important;
+    //     // transform: rotate(-45deg);    
+    //     box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+    // }
+    .time-box-first::after, .time-box-second::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: -0.5em;
+        bottom: -8px;
+        left: 43%;
+        box-sizing: border-box;
+        
+        border: 12px solid black;
+        border-color: transparent transparent #fff #fff;
+        
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+    }
+
+    .time-box-first::before, .time-box-second::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: -0.5em;
+        bottom: -13px;
+        left: 42%;
+        box-sizing: border-box;
+        
+        border: 14px solid black;
+        border-color: transparent transparent #dedede #dedede;
+        
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        opacity: 0.5;
+    }
+
+    .time-box-second ion-card-content {
+        min-height: 103px;
+    }
+
+      .time-option {
+          width: 60px;
+          padding: 4px;
+          text-align: center;
+          border: 1px solid $light-gray;
+          display: inline-block;
+          color: #000;
+          margin: 4px 5px;
+      }
+
+      .time-options {
+          padding: 15px !important;
+           .time-box{
+            margin:  auto;
+            text-align: center;
+           }
+          ion-card-content {
+              padding: 6px !important;
+          }
+      }
+
+      .time-option-selected {
+          background-image: linear-gradient($light-green, $dark-green);
+          color: #fff;
+      }
+
+      .no-of-person {
+          width: 28px;
+          height: 28px;
+          text-align: center;
+          margin: auto;
+          line-height: 26px;
+          color: $gray;
+          font-weight: bold;
+      }
+
+      .no-of-person-selected {
+          background-image: linear-gradient($light-green, $dark-green);
+          color: #fff;
+          border-radius: 50%;
+      }
+      .no-of-person-heading {
+          color: $gray;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 0px 22px;
+      }
+
+      .booking-heading {
+          color: $gray;
+          font-weight: bold;
+          text-align: center;
+          font-size: 16px;
+      }
+
+      .booking-text {
+          color: $normal-green;
+          font-weight: bold;
+          text-align: center;
+          font-size: 16px;
+      }
+
+      .booking-card {
+
+          margin-top: 20px;
+          margin-bottom: 20px;
+          ion-col {
+              padding: 0 !important;
+          }
+          ion-card{
+              margin: 0 !important;
+              width: 100% !important;
+          }
+      }
+
+      .book-table-button {
+        // background-image: linear-gradient($light-green, $dark-green);
+        background-color: $dark-green;
+        font-size: 18px !important;
+        height: 45px !important;
+        margin: 0px;
+        background-image: $gradient-primary;  
+    }
+    .datetime {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        padding: 0 !important;
+    }
+    .time-min-height {
+        min-height: 20px;
+    }
+    .card-content-ios{
+        &::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            margin-left: -6px;
+            bottom: -7px;
+            left: 43%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 12px solid black;
+            border-color: transparent transparent #fff #fff;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+    ion-content > div.scroll-content > ion-row:nth-child(3) > ion-col:nth-child(2) > ion-card > ion-card-content.card-content-ios{
+        padding-bottom: 19px !important;
+    }
+}

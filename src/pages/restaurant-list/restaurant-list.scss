@@ -1,0 +1,114 @@
+page-restaurant-list {
+    .get-served-card {
+        width: 100% !important;
+        margin: 0;
+    }
+
+    .address {
+        color: #afafaf;
+        font-size: 13px;
+        text-align: left;
+        padding: 0px 6px 2px 6px;
+    }
+
+    .title {
+        text-align: left;
+        font-weight: bold;
+        padding-left: 5px;
+        color: #4d4d4d;
+        font-size: 20px;
+    }
+
+    .rating {
+        ion-icon {
+            font-size: 14px;
+        }
+        padding-right: 5px;
+    }
+
+    ion-card {
+        border-radius: 5px !important;
+    }
+
+    .hotel-image {
+        position: relative;
+    }
+
+    .image-text {
+        position: absolute;
+        bottom: 2px;
+        right: 5px;
+        color: #fff;
+        font-size: 12px;
+    }
+    .chip {
+        background-color: $light-green;
+        color: #fff;
+        display: inline;
+        font-size: 14px;
+        padding: 2px 4px;
+        margin-left: 10px;
+        border-radius: 2px;
+        ion-icon {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    }
+    .star-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .reviews-wrap{
+        display: flex;
+        justify-content: flex-end;
+        div{
+            width: 71.48px;
+        }
+    }
+    .search-box {
+        padding: 16px 0 16px 0;
+        width: 100%;
+    }
+    .search {
+        box-shadow: 0px 0px 4px 1px #dedede;
+        border-radius: 15px;
+        height: 36px;
+        min-height: 36px;
+
+        .item-inner {
+            border: none!important;
+        }
+    }
+    .search > div.item-inner > div > ion-input > input {
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #eaeaea;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: #eaeaea;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: #eaeaea;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #eaeaea;
+        }
+    }
+    .info-wrap{
+        background: #932703;
+        color: white;
+        position: absolute;
+        left: 0;
+        top: 20px;
+        font-size: 14px;
+        -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.6);
+        box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.6);
+        padding: 3px 10px;
+        border-radius: 0 3px 3px 0;
+    }
+    .back-button{
+        display: none !important;
+
+    }
+}

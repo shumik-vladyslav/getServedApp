@@ -1,0 +1,114 @@
+<!--
+  Generated template for the MealBookingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <ion-row>
+        <ion-col col-9>
+          Indian Villa
+        </ion-col>
+        <ion-col col-1>
+          <ion-icon name="search"></ion-icon>
+        </ion-col>
+        <ion-col col-1></ion-col>
+        <ion-col col-1>
+          <ion-icon name="cart"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-navbar>
+
+  <ion-row>
+    <ion-col class="wrapper">
+      <ion-card>
+        <ion-card-content class="p-0">
+
+          <ion-list class="of-visible">
+            <div class="list-wrap" *ngFor="let item of list">
+              <ion-item class="of-visible">
+                <ion-row (click)="toggleDropdown()">
+                  <ion-col col-3>
+                    <div class="circle-image">
+                      <img [src]="item.img">
+                    </div>
+                  </ion-col>
+                  <ion-col col-8>
+                    <div class="dish-title">
+                      {{item.title}}
+                    </div>
+                  </ion-col>
+                  <ion-col col-1>
+                    <div class="arrow-icon">
+                      <ion-icon name="ios-arrow-down-outline"></ion-icon>
+                    </div>
+                  </ion-col>
+                </ion-row>
+
+                <ion-list class="of-visible" *ngIf="dropdown">
+                  <ion-item class="of-visible" *ngFor="let subItem of item.variety">
+                    <ion-row>
+                      <ion-col col-3 class="m-r-10 img-wrap">
+                        <img height="auto" width="100%" [src]="subItem.img">
+                      </ion-col>
+                      <ion-col col-6>
+                        <div class="fw-600">
+                          {{subItem.title}}
+                        </div>
+                        <ion-row class="of-visible" justify-content-between align-items-center>
+                          <div>
+                            ₹ {{subItem.price}}
+                          </div>
+                          <div>
+                            <dropdawn [data]="subItem.sizes" name="Chose Size" (select)="year = $event"></dropdawn>
+                          </div>
+                        </ion-row>
+                      </ion-col>
+                      <div class="button-count-wrap">
+                        <button *ngIf="!showCount" (click)="showCount = true" class="btn-add">
+                          ADD
+                        </button>
+                        <div *ngIf="showCount" class="count-wrap">
+                          <div class="c-p">-</div>
+                          <div>
+                            2
+                          </div>
+                          <div class="c-p">+</div>
+                        </div>
+                      </div>
+                    </ion-row>
+                  </ion-item>
+                </ion-list>
+
+              </ion-item>
+            </div>
+          </ion-list>
+
+        </ion-card-content>
+      </ion-card>
+
+      <ion-footer *ngIf="showCount">
+        <ion-row align-items-center>
+          <div class="final-count">
+            ₹ 450
+          </div>
+          <div class="c-p view-card" (click)="goToProceedToPaymentPage()">
+            View Cart (02)
+            <ion-icon name="md-arrow-forward"></ion-icon>
+          </div>
+        </ion-row>
+      </ion-footer>
+
+    </ion-col>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>

@@ -1,0 +1,13 @@
+<div class="drb-wrap">
+  <div class="button-wrap">
+    <button (click)="showDrb = !showDrb" class="btn">
+      {{name}}
+    </button>
+    <ion-icon name="ios-arrow-down-outline"></ion-icon>
+  </div>
+  <div [ngClass]="{'active': showDrb}" class="drb">
+    <div class="drb-item" *ngFor="let item of data" (click)="cl(item.name);showDrb = false; name = item.name ">
+      {{item.name}}
+    </div>
+  </div>
+</div>

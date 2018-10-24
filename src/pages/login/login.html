@@ -1,0 +1,74 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content [ngClass]="{'blur': blur}">
+
+  <div class="header">
+
+    <div class="logo-box">
+      <img src="assets/icon/logo.png" class="logo">
+    </div>
+
+    <div class="login-box">
+      <div class="login-text l-s-1">
+        LogIn
+      </div>
+      <div class="curve">
+        <!-- <img src="./assets/imgs/wave.svg"> -->
+      </div>
+    </div>
+
+    <div class="signup-box" (click)="goToSignUpPage()">
+      <div class="signup-text">
+        SignUp
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="login-form">
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          
+          <ion-icon name="" item-start>
+            <img width="21px" src="assets/SVG/user_login.svg" alt="">
+          </ion-icon>
+
+          <ion-input type="text" placeholder="User ID"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+
+          <ion-icon name="" item-start>
+            <img width="21px" src="assets/SVG/pass_login.svg" alt="">
+          </ion-icon>
+
+          <ion-input type="Password" placeholder="Password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+
+  <button ion-button block text-capitalize (click)="fakeLogin()" class="fw-600 l-s-1 gradient-primary">Login</button>
+
+  <div class="center-link c-p" (click)="presentForgotPassPage()">Forgot Password?</div>
+
+
+</ion-content>

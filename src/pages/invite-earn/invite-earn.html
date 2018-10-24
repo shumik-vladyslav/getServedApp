@@ -1,0 +1,75 @@
+<!--
+  Generated template for the ViewRestaurantPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="ion-header">
+
+  <ion-navbar [ngClass]="{'bg-transparent' : !navBgColor, 'bg-green' : navBgColor}">
+    <ion-row>
+      <ion-col>
+        <ion-title>Invite & Earn</ion-title>
+      </ion-col>
+    </ion-row>
+
+  </ion-navbar>
+
+  <shrinking-header [scrollArea]="myContent" headerHeight="210" (newHeight)="headerHeightChange($event)">
+
+    <img class="img" width="100%" height="100%" src="/assets/SVG/people.svg" alt="">
+    <div class="text-header">
+      <div class="caption">
+        HARS26
+      </div>
+      <div class="comment">
+        Tap to copy
+      </div>
+    </div>
+  </shrinking-header>
+
+</ion-header>
+
+<ion-content #myContent fullscreen>
+
+  <div class="p-t-10 p-b-10 p-l-5 p-r-5">
+    <div class="text-center content-wrap">
+      <div class="m-b-20">
+        You earn upto Rs.200 this month.
+      </div>
+      <button class="button-contacts m-b-20">
+        <ion-row align-items-center>
+          <img width="25px" class="m-r-20" src="assets/SVG/phone_book.svg" alt=""> Invite Phone Contacts
+        </ion-row>
+        <img height="20px" src="assets/SVG/arrow_right.svg" alt="">
+      </button>
+      <div class="m-b-5">
+        No SMS Charge.
+      </div>
+      <div class="m-b-10">
+        745 out of 745 contacts not using <span class="fw-600"> Get Served.</span>
+      </div>
+
+      <hr class="m-b-10">
+
+      <ion-row justify-content-between align-items-center class="p-l-10 p-r-10">
+        <div class="social-item">
+          <img height="30px" width="30px" class="m-b-10" src="assets/SVG/whats_app.svg" alt=""> WhatsApp
+        </div>
+        <div class="social-item">
+          <img height="30px" width="30px" class="m-b-10" src="assets/SVG/facebook.svg" alt=""> Facebook
+        </div>
+        <div class="social-item">
+          <img height="30px" width="30px" class="m-b-10" src="assets/SVG/New_Logo_Gmail.svg" alt=""> Gmail
+        </div>
+        <div class="social-item">
+          <img height="30px" width="30px" class="m-b-10" src="assets/SVG/share.svg" alt=""> More
+        </div>
+      </ion-row>
+    </div>
+  </div>
+
+  <div class="terms">
+    Read Terms & Conditions
+  </div>
+</ion-content>

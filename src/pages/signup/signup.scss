@@ -1,0 +1,207 @@
+page-signup {
+
+    .header {
+        width: 100%;
+        height: 266px;
+        background: $normal-green;
+        background-image: url('../assets/imgs/login-bg.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+    }
+
+    .login-box {
+        position: absolute;
+        bottom: -1px;
+        left: 10px;
+        padding-top: 20px;
+    }
+
+    .signup-box {
+        position: absolute;
+        bottom: -1px;
+        right: 10px;
+    }
+
+    .curve {
+        // width:100px;
+        // height:50px;          
+        // border-radius: 50%/50px 50px 0 0;
+        // background-color: #fff;
+
+        background: url('../assets/imgs/wave.svg');
+        background-repeat: no-repeat;
+        width:180px;
+        height: 50px;
+        background-size: 100%;
+    }
+    
+    .login-text, .signup-text {
+        color: #fff;
+        font-size: 19px;
+        text-align: center;
+    }
+    
+    .signup-text {
+        font-weight: bold;
+    }
+
+    .login-text {
+        margin-bottom: 40px;
+        font-weight: normal;
+        width: 180px;
+    }
+
+    ::-webkit-scrollbar { 
+        display: none; 
+    }
+
+    .signup-form {
+        width: 80%;
+        margin: auto;
+        margin-top: 8px;
+        margin-bottom: 30px;
+    }
+
+    ion-item {
+        border-bottom: 1px solid #575757 !important;
+    }
+
+    .input-has-focus {
+        border-bottom: 1px solid #488aff !important;
+        box-shadow: 0px 2px 2px -2px #488aff;
+    }
+
+    .item-inner {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .center-text {
+        width: 100%;
+        text-align: center;
+        color: $gray;
+        margin-bottom: 20px;        
+        font-size: 12px;
+    }
+
+    button {
+        // background-image: linear-gradient($light-green, $dark-green);
+        background-color: $dark-green;
+        font-size: 18px !important;
+        height: 4rem !important;
+    }
+
+    .logo {
+        margin: auto;
+        margin-top: 25px;
+        height: 100px;
+        float: none;
+    }
+
+    .logo-box {
+        text-align: center;
+    }
+
+    ion-col {
+        padding: 2px !important;
+    }
+
+    .text-input{
+        margin-bottom: 0;
+        margin-top: 15px;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #b1b1b1;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: #b1b1b1;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: #b1b1b1;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #b1b1b1;
+        }
+    }
+    .eye-icon{
+        margin-bottom: 0 !important;
+        display: inline-flex;
+        align-items: flex-end;
+        font-size: 19px;
+        color: #a5a5a5;
+    }
+
+    .container {
+        display: inline-block;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    /* Hide the browser's default radio button */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    /* Create a custom radio button */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 15px;
+        width: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        border: 1px solid #797979;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    /* When the radio button is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+        // background-color: #2196F3;
+    }
+    
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        // position: absolute;
+        display: none;
+    }
+    
+    /* Show the indicator (dot/circle) when checked */
+    .container input:checked ~ .checkmark:after {
+        display: block;
+    }
+    
+    /* Style the indicator (dot/circle) */
+    .container .checkmark:after {
+         top: 9px;
+        left: 9px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #797979;
+    }
+
+    .gradient-primary{
+        transition: all 0.3s;
+        &:hover{
+            background-image: none;
+        }
+    }
+}

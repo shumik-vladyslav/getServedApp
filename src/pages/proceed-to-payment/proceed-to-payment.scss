@@ -1,0 +1,107 @@
+page-proceed-to-payment {
+
+    .upper-row, .bill-desc {
+        padding: 0 !important;
+        ion-col {
+            padding: 0 !important;
+            text-align: center;
+            font-weight: bold;
+            color: $gray;
+            font-size: 18px;
+        }
+        ion-card {
+            margin: 0 !important;
+            width: 100% !important;
+
+            ion-card-content {
+                padding: 5px 16px !important;
+            }
+        }
+    }
+
+    .bill-desc {
+        margin-top: 10px;
+        // height: 100%;
+        // width: 100%;
+        
+        ion-card-content {
+            margin-top: 20px;
+        }
+
+        ion-card-content, ion-card {
+            // height: 100%;
+            // width: 100%;
+
+            padding-bottom: 15px;
+        }
+    }
+
+    .bill-desc>ion-col {
+        height: 100%;
+        width: 100%;
+    }
+
+    .orderBy {
+        color: $light-green !important;
+    }
+
+    .booking-text-box {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+    .booking-text {
+        display: table-cell;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+    ion-content {
+        background-color: #fcfcfc !important;
+    }
+
+    .proceed-to-button {
+        // background-image: linear-gradient($light-green, $dark-green);
+        background-color: $dark-green;
+        font-size: 18px !important;
+        height: 45px !important;
+        margin: 0px;
+        text-transform: none;
+        background-image: $gradient-primary;
+    }
+
+    .right-align {
+        text-align: right !important;
+        display: inline-flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .sub-text {
+        font-size: 14px;
+    } 
+
+    .green-text {
+        color: $light-green !important;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .promo-text {
+        color: $orange !important;        
+        border-bottom: 1px solid $orange;
+        font-size: 16px !important;
+    }
+
+    .promo-code {
+        margin-top: 35px;
+    }
+
+    .promo-input-box {
+        width: 70%;
+        margin: auto;
+    }
+
+}

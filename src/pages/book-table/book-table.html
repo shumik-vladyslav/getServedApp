@@ -1,0 +1,233 @@
+<!--
+  Generated template for the BookTablePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Indian Villa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-row class="date-row">
+    <ion-col>
+
+      <ion-card>
+        <ion-card-content>
+          <ion-slides slidesPerView="5">
+
+            <ion-slide>
+              <div class="date-box">
+                <div class="day">Mon</div>
+                <div class="date">16</div>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="date-box">
+                <div class="day">Tue</div>
+                <div class="date">17</div>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="date-box">
+                <div class="day">Wed</div>
+                <div class="date">18</div>
+              </div>
+            </ion-slide>
+
+
+            <ion-slide>
+              <div class="date-box">
+                <div class="day">Thur</div>
+                <div class="date selected-date">19</div>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="date-box">
+                <div class="day">Fri</div>
+                <div class="date">20</div>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="date-box">
+                <div class="day">Sat</div>
+                <div class="date">21</div>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="date-box">
+                <div class="day">Sun</div>
+                <div class="date">22</div>
+              </div>
+            </ion-slide>
+
+          </ion-slides>
+        </ion-card-content>
+      </ion-card>
+
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div class="time-heading">
+        Choose your time
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-1></ion-col>
+    <ion-col>
+      <ion-card class="time-box-first">
+
+        <ion-card-content>
+          <div class="time-title">
+            HOUR
+          </div>
+          <div class="time-placeholder">
+            <div>
+                <span *ngIf="bookingTime"> {{ bookingTime.split(':')[0].charAt(0) }} </span>
+                <span *ngIf="!bookingTime">0</span>
+              <div class="underscore"></div>
+            </div>
+            <div>
+                <span *ngIf="bookingTime"> {{ bookingTime.split(':')[0].charAt(1) }} </span>
+                <span *ngIf="!bookingTime">0</span>
+              <div class="underscore"></div>
+            </div>
+            <ion-datetime class="datetime"  pickerFormat="hh:mm a" displayFormat="hh:mm a" [(ngModel)]="bookingTime"></ion-datetime>
+          </div>
+        </ion-card-content>
+
+      </ion-card>
+    </ion-col>
+
+    <ion-col col-1>
+      <div class="colon">:</div>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="time-box-second">
+
+        <ion-card-content>
+          <div class="time-title">
+            MINUTE
+          </div>
+
+          <div class="time-placeholder">
+            <div>
+              <span *ngIf="bookingTime"> {{ bookingTime.split(':')[1].charAt(0) }} </span>
+              <span *ngIf="!bookingTime">0</span>
+              <div class="underscore"></div>
+            </div>
+            <div>
+                <span *ngIf="bookingTime"> {{ bookingTime.split(':')[1].charAt(1) }} </span>
+                <span *ngIf="!bookingTime">0</span>
+              <div class="underscore"></div>
+            </div>
+            <ion-datetime class="datetime"  pickerFormat="hh:mm a" displayFormat="hh:mm a" [(ngModel)]="bookingTime"></ion-datetime>
+          </div>
+        </ion-card-content>
+
+      </ion-card>
+      <!-- <div class="triangle-with-shadow"></div> -->
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="time-options">
+      <ion-card>
+        <ion-card-content>
+          <div class="time-box">
+            <div class="time-option">10:00</div>
+            <div class="time-option">10:30</div>
+            <div class="time-option">11:00</div>
+            <div class="time-option">11:30</div>
+            <div class="time-option">12:00</div>
+            <div class="time-option time-option-selected">12:30</div>
+            <div class="time-option">01:00</div>
+            <div class="time-option">01:30</div>
+            <div class="time-option">02:00</div>
+            <div class="time-option">02:00</div>
+            <div class="time-option">02:00</div>
+            <div class="time-option">02:00</div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+
+    <ion-col>
+      <div class="no-of-person-heading">Select Number of People</div>
+
+      <ion-slides slidesPerView="5">
+
+        <ion-slide>
+          <div class="no-of-person">1</div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="no-of-person no-of-person-selected">2</div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="no-of-person">3</div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="no-of-person">4</div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="no-of-person">5</div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="no-of-person">6</div>
+        </ion-slide>
+
+      </ion-slides>
+
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row class="booking-card">
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-row>
+              <ion-col>
+                  <div class="booking-heading">Booking For: </div>
+                </ion-col>
+                <ion-col>
+                  <div class="booking-text"> Harkirat Singh <ion-icon class="pen-icon" name="md-create" color="primary"></ion-icon> </div>
+                </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>    
+  </ion-row>
+
+
+</ion-content>
+
+<ion-footer>
+  <button class="book-table-button" ion-button block (click)="goToBookingConfirmationPage()">Book Table</button>
+</ion-footer>

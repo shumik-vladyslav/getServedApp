@@ -1,0 +1,380 @@
+<!--
+  Generated template for the ViewRestaurantPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar [ngClass]="{'bg-transparent' : !navBgColor, 'bg-green' : navBgColor}">
+    <ion-row>
+      <ion-col>
+        <ion-title>Indian Villa</ion-title>
+      </ion-col>
+
+      <ion-col col-2>
+        <ion-icon name="md-share" color="light"></ion-icon>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon name="heart" color="light"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+  </ion-navbar>
+
+  <shrinking-header [scrollArea]="myContent" headerHeight="135" (newHeight)="headerHeightChange($event)">
+    <ion-row>
+      <ion-col>
+
+        <ion-row class="title-bar">
+          <ion-col>
+            <div class="name">
+              Indian Villa
+              <div class="chip">
+                4.3
+                <ion-icon name="star"></ion-icon>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="address-bar">
+          <ion-col>
+            <div class="address">SCO 17, 18, C-Block, Ranjit Avenue, Amritsar, Punjab</div>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-col>
+
+      <ion-col col-2>
+        <img class="side-icon" src="./assets/icon/RD2.png">
+      </ion-col>
+
+    </ion-row>
+
+  </shrinking-header>
+
+</ion-header>
+
+
+<ion-content fullscreen #myContent>
+
+
+  <ion-card>
+
+    <ion-card-content>
+
+      <div class="offer offer-orange">
+        <ion-row>
+          <ion-col class="custom-col">
+            <div class="short">
+              <div class="upper-text">
+                Get Upto
+              </div>
+              <div class="lower-text">
+                Rs. 300
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div class="description">
+              Pay bill via App & get cashback upto Rs. 300
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="offer offer-green">
+        <ion-row>
+          <ion-col class="custom-col">
+            <div class="short">
+              <div class="upper-text">
+                Get Upto
+              </div>
+              <div class="lower-text">
+                30% OFF
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div class="description">
+              Pay 100%  bill now get upto 30% OFF
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div>
+        <button class="direction-button" ion-button block>
+          <ion-icon name="paper-plane"></ion-icon> &nbsp; Direction
+        </button>
+        <button class="view-menu-button" ion-button block> View Menu </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <div class="facility-heading">Facilties</div>
+
+      <!-- Facility Row 1 Start -->
+      <ion-row>
+
+        <!-- Single Facility Start -->
+        <ion-col>
+          <ion-row class="facility">
+            <ion-col col-2>
+              <img class="facility-icon" src="./assets/icon/RD3.png">
+            </ion-col>
+            <ion-col>
+              <div class="facility-text">Seating Available</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <!-- Single Facility  End -->
+
+
+        <ion-col col-1></ion-col>
+
+        <!-- Single Facility Start -->
+        <ion-col>
+          <ion-row class="facility">
+            <ion-col col-2>
+              <img class="facility-icon" src="./assets/icon/RD8.png">
+            </ion-col>
+            <ion-col>
+              <div class="facility-text">Serves Non-Veg</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <!-- Single Facility  End -->
+
+      </ion-row>
+      <!-- Facility Row 1 End  -->
+
+      <!-- Facility Row 2 Start -->
+      <ion-row>
+
+        <!-- Single Facility Start -->
+        <ion-col>
+          <ion-row class="facility">
+            <ion-col col-2>
+              <img class="facility-icon" src="./assets/icon/RD4.png">
+            </ion-col>
+            <ion-col>
+              <div class="facility-text">Fully Air Conditioned</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <!-- Single Facility  End -->
+
+
+        <ion-col col-1></ion-col>
+
+        <!-- Single Facility Start -->
+        <ion-col>
+          <ion-row class="facility">
+            <ion-col col-2>
+              <img class="facility-icon" src="./assets/icon/RD7.png">
+            </ion-col>
+            <ion-col>
+              <div class="facility-text">Serves Alcohol</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <!-- Single Facility  End -->
+
+      </ion-row>
+      <!-- Facility Row 2 End  -->
+
+      <!-- Facility Row 3 Start -->
+      <ion-row>
+
+        <!-- Single Facility Start -->
+        <ion-col>
+          <ion-row class="facility">
+            <ion-col col-2>
+              <img class="facility-icon" src="./assets/icon/RD5.png">
+            </ion-col>
+            <ion-col>
+              <div class="facility-text">Cash Accepted</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <!-- Single Facility  End -->
+
+
+        <ion-col col-1></ion-col>
+
+        <!-- Single Facility Start -->
+        <ion-col>
+          <ion-row class="facility">
+            <ion-col col-2>
+              <img class="facility-icon" src="./assets/icon/RD6.png">
+            </ion-col>
+            <ion-col>
+              <div class="facility-text">Cards Accepted</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <!-- Single Facility  End -->
+
+      </ion-row>
+      <!-- Facility Row 3 End  -->
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <div class="heading">Cuisines</div>
+          <ul class="cuisines">
+            <li>South Indian</li>
+            <li>Continental</li>
+            <li>Italian</li>
+          </ul>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <div class="heading">Cuisines</div>
+          <div class="text">Italian Food</div>
+        </ion-col>
+        <ion-col>
+          <div class="heading">Approx. Cost</div>
+          <div class="text">Rs.500 (for 2 person)</div>
+        </ion-col>
+      </ion-row>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <div class="heading">Cuisines</div>
+          <ul class="cuisines">
+            <li>South Indian</li>
+            <li>Continental</li>
+            <li>Italian</li>
+          </ul>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <div class="heading">Cuisines</div>
+          <div class="text">Italian Food</div>
+        </ion-col>
+        <ion-col>
+          <div class="heading">Approx. Cost</div>
+          <div class="text">Rs.500 (for 2 person)</div>
+        </ion-col>
+      </ion-row>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <div class="fs-20 m-b-20 l-s-1 fw-600">
+        Reviews
+      </div>
+
+      <div class="m-b-30">
+        <ion-row align-items-center justify-content-between>
+          <ion-row align-items-center>
+            <img width="40px" style="width: 40px;" class="m-r-10 b-r-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVH41YjjcDbhVGgEzU7a2UUWGgKges4wsQpVpg9OyO0ih1VZOszg"
+              alt="">
+            <div>
+              <span class="fs-18 fw-600 m-r-5">
+                Harkirat singh
+              </span>
+              <span class="fs-12">
+                • 5 days ago
+              </span>
+            </div>
+          </ion-row>
+          <ion-row align-items-center class="m-t-5">
+            <div class="fs-12">
+              Rated
+            </div>
+            <div class="chip-comment">
+              4.3
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </ion-row>
+        </ion-row>
+
+        <p class="m-t-10 fs-16">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum porro accusantium
+          alias ex reprehenderit natus deleniti eum voluptates ut cum repudiandae quia asperiores dolor eos nobis animi,
+          nihil laudantium aperiam unde quasi. Blanditiis perspiciatis vitae pariatur! Atque, corporis dolores?</p>
+
+      </div>
+
+      <div class="m-b-30">
+        <ion-row align-items-center justify-content-between>
+          <ion-row align-items-center>
+            <img width="40px" style="width: 40px;" class="m-r-10 b-r-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVH41YjjcDbhVGgEzU7a2UUWGgKges4wsQpVpg9OyO0ih1VZOszg"
+              alt="">
+            <div>
+              <span class="fs-18 fw-600 m-r-5">
+                Harkirat singh
+              </span>
+              <span class="fs-12">
+                • 5 days ago
+              </span>
+            </div>
+          </ion-row>
+          <ion-row align-items-center class="m-t-5">
+            <div class="fs-12">
+              Rated
+            </div>
+            <div class="chip-comment">
+              4.3
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </ion-row>
+        </ion-row>
+
+        <p class="m-t-10 fs-16">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum porro accusantium
+          alias ex reprehenderit natus deleniti eum voluptates ut cum repudiandae quia asperiores dolor eos nobis animi,
+          nihil laudantium aperiam unde quasi. Blanditiis perspiciatis vitae pariatur! Atque, corporis dolores?</p>
+
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  <div class="textarea-wrap">
+
+    <textarea placeholder="Add Review" class="textarea"></textarea>
+
+    <ion-row justify-content-end>
+      <button class="primary-btn-custome">
+        ADD
+      </button>
+    </ion-row>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <button class="book-table-button" ion-button block (click)="goToBookTablePage()">Book Table</button>
+</ion-footer>

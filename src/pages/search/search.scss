@@ -1,0 +1,25 @@
+page-search {
+
+    ion-navbar {
+        min-height: 64px !important;
+    }
+
+    .search {
+        box-shadow: 0px 0px 4px 1px #dedede;
+        border-radius: 15px;
+        height: 36px;
+        min-height: 36px;
+
+        .item-inner {
+            border: none!important;
+        }
+    }
+
+    .input-has-focus {
+        box-shadow: 0px 0px 4px 1px $normal-green;
+        .item-inner {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+}
