@@ -30,8 +30,8 @@
 
           <ion-list class="of-visible">
             <div class="list-wrap" *ngFor="let item of list">
-              <ion-item class="of-visible">
-                <ion-row (click)="toggleDropdown()">
+              <ion-item class="of-visible p-0">
+                <ion-row (click)="toggleDropdown()" class="row-toggle" [ngClass]="{'active': dropdown}">
                   <ion-col col-3>
                     <div class="circle-image">
                       <img [src]="item.img">
@@ -44,12 +44,12 @@
                   </ion-col>
                   <ion-col col-1>
                     <div class="arrow-icon">
-                      <ion-icon name="ios-arrow-down-outline"></ion-icon>
+                      <ion-icon name="ios-arrow-down-outline" class="rotate" [ngClass]="{'active': dropdown}"></ion-icon>
                     </div>
                   </ion-col>
                 </ion-row>
 
-                <ion-list class="of-visible" *ngIf="dropdown">
+                <ion-list class="of-visible" class="hide-item" [ngClass]="{'show-item': dropdown}">
                   <ion-item class="of-visible" *ngFor="let subItem of item.variety">
                     <ion-row>
                       <ion-col col-3 class="m-r-10 img-wrap">
@@ -59,7 +59,7 @@
                         <div class="fw-600">
                           {{subItem.title}}
                         </div>
-                        <ion-row class="of-visible" justify-content-between align-items-center>
+                        <ion-row class="of-visible width-150" justify-content-between align-items-center>
                           <div>
                             ₹ {{subItem.price}}
                           </div>
@@ -91,23 +91,22 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-footer *ngIf="showCount">
-        <ion-row align-items-center>
-          <div class="final-count">
-            ₹ 450
-          </div>
-          <div class="c-p view-card" (click)="goToProceedToPaymentPage()">
-            View Cart (02)
-            <ion-icon name="md-arrow-forward"></ion-icon>
-          </div>
-        </ion-row>
-      </ion-footer>
-
     </ion-col>
   </ion-row>
 
 </ion-header>
 
+<ion-footer *ngIf="showCount">
+  <ion-row align-items-center>
+    <div class="final-count">
+      ₹ 450
+    </div>
+    <div class="c-p view-card" (click)="goToProceedToPaymentPage()">
+      View Cart (02)
+      <ion-icon name="md-arrow-forward"></ion-icon>
+    </div>
+  </ion-row>
+</ion-footer>
 
 <ion-content padding>
 

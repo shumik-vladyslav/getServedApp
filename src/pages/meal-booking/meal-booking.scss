@@ -95,6 +95,8 @@ page-meal-booking {
         align-items: center;
         justify-content: center;
         border-radius: 4px;
+        min-width: 80px;
+        max-width: 80px;
     }
     .button-wrap{
         padding: 0 !important;
@@ -102,7 +104,7 @@ page-meal-booking {
     .button-count-wrap{
         width: 46px;
         position: absolute;
-        right: -3px;
+        right: 16px;
         top: 0px;
         background-image: $gradient-primary;
         padding: 1px;
@@ -169,5 +171,37 @@ page-meal-booking {
     .drb-wrap .drb{
         width: 100px;
         right: 0;
+    }
+    .item-inner{
+        padding-right: 0 !important;
+    }
+    .label {
+        margin-right: 0;
+    }
+    .row-toggle{
+        padding-left: 16px;
+        &.active{
+            -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+            padding-bottom: 20px;
+        }
+    }
+    .rotate{
+        transition: all 0.3s;
+        &.active{
+            transform: rotate(180deg);
+        }
+    }
+    .hide-item{
+        transition: all .3s;
+        transform: scale(0);
+        max-height: 0;
+        &.show-item{
+            transform: scale(1) !important;
+            max-height: 10000px !important;
+        }
+    }
+    .width-150{
+        max-width: 150px;
     }
 }
