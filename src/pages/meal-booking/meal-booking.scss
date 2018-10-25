@@ -196,6 +196,8 @@ page-meal-booking {
         transition: all .3s;
         transform: scale(0);
         max-height: 0;
+        position: relative;
+        z-index: 11;
         &.show-item{
             transform: scale(1) !important;
             max-height: 10000px !important;
@@ -203,5 +205,8 @@ page-meal-booking {
     }
     .width-150{
         max-width: 150px;
+    }
+    .drb-wrap .drb .drb-item{
+        padding: 9px 16px;
     }
 }

@@ -27,6 +27,13 @@ export class MealBookingPage {
           sizes: [ {name: 'Large'}, {name: 'Medium'}, {name: 'Small'}],
           img: './assets/imgs/H1.png',
           quantity: 0
+        },
+        { 
+          title: 'Mushroom Pizza',
+          price: '450',
+          sizes: [ {name: 'Large'}, {name: 'Medium'}, {name: 'Small'}],
+          img: './assets/imgs/H1.png',
+          quantity: 0
         }
       ]
     },
