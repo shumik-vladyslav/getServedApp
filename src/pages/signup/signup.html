@@ -31,60 +31,63 @@
   </div>
 
 
-  <div class="signup-form">
+  <form novalidate [formGroup]="myForm">
 
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-input type="text" placeholder="Full Name*"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
+    <div class="signup-form">
 
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-input type="email" placeholder="E-mail Address*"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item [ngClass]="{'error': myForm.controls['fullName'].invalid && (customeValidator === false)}">
+            <ion-input type="text" placeholder="Full Name*" [(ngModel)]="dataUser.fullName" type="text" formControlName="fullName"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-input [type]="passwordHidden ? 'password' : 'text'" placeholder="Password*"></ion-input>
-          <ion-icon class="eye-icon" [name]="passwordHidden ? 'eye-off' : 'eye'" [color]="passwordHidden ? 'light-gray' : 'normal-green'" item-end (click)="togglePassword()"></ion-icon>
-        </ion-item>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item [ngClass]="{'error': myForm.controls['email'].invalid && (customeValidator === false)}">
+            <ion-input type="email" placeholder="E-mail Address*" [(ngModel)]="dataUser.email" type="email" formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
 
-    <ion-row>
-      <ion-col class="m-r-10">
-        <ion-item>
-          <ion-input type="number" placeholder="Pin Code*"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-          <ion-input type="text" placeholder="Have Refer Code?"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item [ngClass]="{'error': myForm.controls['password'].invalid && (customeValidator === false)}">
+            <ion-input [type]="passwordHidden ? 'password' : 'text'" placeholder="Password*" [(ngModel)]="dataUser.password" formControlName="password"></ion-input>
+            <ion-icon class="eye-icon" [name]="passwordHidden ? 'eye-off' : 'eye'" [color]="passwordHidden ? 'light-gray' : 'normal-green'"
+              item-end (click)="togglePassword()"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="m-r-10">
+          <ion-item [ngClass]="{'error': myForm.controls['pincode'].invalid && (customeValidator === false)}">
+            <ion-input type="tel" Maxlength="4" max="9999" [(ngModel)]="dataUser.pincode" placeholder="Pin Code*" formControlName="pincode"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" placeholder="Have Refer Code?"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </div>
+
+    <div class="center-text">
+      <label class="container">
+        <input type="checkbox" formControlName="terms" checked="checked" name="radio" [(ngModel)]="terms">
+        <span class="checkmark"></span>
+      </label>
+      By signing up you agree our <a href="#">Terms</a> & <a href="#">Privacy Policy.</a>
+    </div>
+
+  </form>
 
 
-
-
-  </div>
-
-  <div class="center-text">
-    <label class="container">
-      <input type="checkbox" checked="checked" name="radio">
-      <span class="checkmark"></span>
-    </label>
-    By signing up you agree our <a href="#">Terms</a> & <a href="#">Privacy Policy.</a>
-  </div>
-
-  <button ion-button block text-capitalize class="fw-600 l-s-1 gradient-primary">Sign Up</button>
+  <button ion-button block text-capitalize class="fw-600 l-s-1 gradient-primary" [ngClass]="{'error': myForm.invalid && (customeValidator === false) || (terms === false)}" (click)="toDoSignUp()">Sign Up</button>
 
 
 

@@ -31,42 +31,48 @@
   </div>
 
 
-  <div class="login-form">
+  <form novalidate [formGroup]="myForm">
 
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          
-          <ion-icon name="" item-start>
-            <img width="21px" src="assets/SVG/user_login.svg" alt="">
-          </ion-icon>
+    <div class="login-form">
 
-          <ion-input type="text" placeholder="User ID"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item [ngClass]="{'error': myForm.controls['email'].invalid && (customeValidator === false)}">
 
-    <ion-row>
-      <ion-col></ion-col>
-    </ion-row>
+            <ion-icon name="" item-start>
+              <img width="21px" src="assets/SVG/user_login.svg" alt="">
+            </ion-icon>
 
-    <ion-row>
-      <ion-col>
-        <ion-item>
+            <ion-input type="text" placeholder="User ID" [(ngModel)]="dataUser.email" formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
 
-          <ion-icon name="" item-start>
-            <img width="21px" src="assets/SVG/pass_login.svg" alt="">
-          </ion-icon>
+      <ion-row>
+        <ion-col></ion-col>
+      </ion-row>
 
-          <ion-input type="Password" placeholder="Password"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item [ngClass]="{'error': myForm.controls['password'].invalid && (customeValidator === false)}">
 
-  </div>
+            <ion-icon name="" item-start>
+              <img width="21px" src="assets/SVG/pass_login.svg" alt="">
+            </ion-icon>
+
+            <ion-input type="Password" placeholder="Password" [(ngModel)]="dataUser.password" formControlName="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </div>
+
+  </form>
 
 
-  <button ion-button block text-capitalize (click)="fakeLogin()" class="fw-600 l-s-1 gradient-primary">Login</button>
+
+
+  <button ion-button block text-capitalize [ngClass]="{'error': myForm.invalid && (customeValidator === false)}" (click)="toDoSignIn()" class="fw-600 l-s-1 gradient-primary">Login</button>
 
   <div class="center-link c-p" (click)="presentForgotPassPage()">Forgot Password?</div>
 

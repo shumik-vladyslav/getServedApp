@@ -25,4 +25,12 @@ export class AuthProvider {
     this.loginStatus.next(status);
   }
 
+  signIn(user) {
+    return this.http.post('https://getserved20181024044343.azurewebsites.net/login', user);
+  }
+
+  signUp(user) {
+    return this.http.post('https://getserved20181024044343.azurewebsites.net/registration', user);
+  }
+
 }

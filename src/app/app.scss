@@ -23,7 +23,16 @@
     src: url("../assets/fonts/AvenirLTStd-Roman.otf") format("opentype");
 }
 .gradient-primary{
-  background-image: $gradient-primary;  
+  background-image: $gradient-primary;
+  &.error{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ed4141), to(#771d1d));
+    background-image: linear-gradient(#ed4141, #771d1d);
+    &:hover{
+      background-color: #ed4141 !important;
+      // background-image: none;
+    }
+  }
+
 }
 .content{
   color: #494949;
