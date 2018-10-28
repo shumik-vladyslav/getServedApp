@@ -1,4 +1,4 @@
-import { Component, NgZone, ViewChild } from '@angular/core';
+import { Component, NgZone, ViewChild, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import { BookTablePage } from '../book-table/book-table';
 
@@ -19,11 +19,12 @@ export class ViewRestaurantPage {
   @ViewChild(Content) content: Content;
 
   private navBgColor: boolean = false;
-
+  dataRestauratn;
   constructor(public navCtrl: NavController, public navParams: NavParams, public zone: NgZone) {
     // setTimeout(()=> {
     //   this.navBgColor = 'linear-gradient(#17c95f, #1d7746)';
     // }, 10000);
+    this.dataRestauratn = navParams.get('item');
   }
 
   ionViewDidLoad() {

@@ -31,6 +31,17 @@ restaurant-recommendation {
 
     .hotel-image {
         position: relative;
+        height: 120px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 100%;
+            width: auto;
+            position: absolute;
+            max-width: unset;
+        }
     }
 
     .image-text {

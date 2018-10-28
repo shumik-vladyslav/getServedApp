@@ -4,6 +4,7 @@ import { SearchPage } from '../search/search';
 import { LocationSearchPage } from '../location-search/location-search';
 import { ViewRestaurantPage } from '../view-restaurant/view-restaurant';
 import { RestaurantListPage } from '../restaurant-list/restaurant-list';
+import { AuthProvider } from '../../providers/auth/auth';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +13,7 @@ import { RestaurantListPage } from '../restaurant-list/restaurant-list';
 export class HomePage {
 
   private time = "10:30";
-  
+
   year;
   day;
   month;
@@ -59,24 +60,35 @@ export class HomePage {
     },
   ];
 
-  constructor(public navCtrl: NavController) {
-    this.dateInit()
+  constructor(public navCtrl: NavController, private restaurant: AuthProvider) {
+    this.dateInit();
+    this.getRostourant();
+  }
+
+  dataRestaurant = [];
+
+  getRostourant() {
+
+    this.restaurant.getRestorant().subscribe((data: any) => {
+        console.log(data)
+        this.dataRestaurant = data;
+    });
   }
 
   goToSearchPage() {
-    this.navCtrl.push(SearchPage, {}, {animate: false});
+    this.navCtrl.push(SearchPage, {}, { animate: false });
   }
 
   goToRestaurantList() {
-    this.navCtrl.push(RestaurantListPage, {}, {animate: false});
+    this.navCtrl.push(RestaurantListPage, {}, { animate: false });
   }
 
   goToLocationSearchPage() {
-    this.navCtrl.push(LocationSearchPage, {}, {animate: false});
+    this.navCtrl.push(LocationSearchPage, {}, { animate: false });
   }
 
-  openRestaurantDetails() {
-    this.navCtrl.push(ViewRestaurantPage);
+  openRestaurantDetails(item) {
+    this.navCtrl.push(ViewRestaurantPage, {item: item});
   }
 
   dateInit() {

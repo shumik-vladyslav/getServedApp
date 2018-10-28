@@ -4,22 +4,19 @@
   <ion-card-content>
 
     <div class="hotel-image">
-      <img src="./assets/imgs/restaurant-default.jpg">
+      <img [src]="data.photos">
       <div class="image-text">2.5 km</div>
     </div>
     
     <ion-row>
       <ion-col>
-          <div class="title"> Indian Villa </div>
+          <div class="title"> {{data.name}} </div>
       </ion-col>
 
       <ion-col col-5>
         <div class="rating">
-            <ion-icon name="star" color="red"></ion-icon>
-            <ion-icon name="star" color="red"></ion-icon>
-            <ion-icon name="star" color="red"></ion-icon>
-            <ion-icon name="star-half" color="red"></ion-icon>
-            <ion-icon name="star-outline" color="red"></ion-icon>
+            <ion-icon *ngFor="let item of dataRate" name="{{item.vlaue ? 'star' : 'star-outline'}}" color="red"></ion-icon>
+            <!-- <ion-icon name="star-outline" color="red"></ion-icon> -->
         </div>
       </ion-col>
 
@@ -27,7 +24,7 @@
 
     <ion-row >
       <ion-col>
-          <div class="address">SCO 17, 18, C-Block, Ranjit Avenue, Amritsar, Punjab</div>
+          <div class="address">{{data.location.country}}, {{data.location.state}}, {{data.location.city}}, {{data.location.street}}, {{data.location.postcode}}</div>
       </ion-col>
     </ion-row>
 

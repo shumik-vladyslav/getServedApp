@@ -36,6 +36,8 @@ import { DropdawnComponent } from '../components/dropdawn/dropdawn';
 import { RestaurantListPage } from '../pages/restaurant-list/restaurant-list';
 import { InviteEarnPage } from '../pages/invite-earn/invite-earn';
 
+import { Facebook } from '@ionic-native/facebook';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -102,7 +104,8 @@ import { InviteEarnPage } from '../pages/invite-earn/invite-earn';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    Facebook
   ]
 })
 export class AppModule {}

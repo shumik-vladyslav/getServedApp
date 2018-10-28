@@ -17,6 +17,8 @@ export class AuthProvider {
     console.log('Hello AuthProvider Provider');
   }
 
+  // url = 'https://getserved20181024044343.azurewebsites.net/'
+  url = "http://localhost:3000/"
   public getLoginStatusAsObservable() {
     return this.loginStatus.asObservable();
   }
@@ -26,11 +28,15 @@ export class AuthProvider {
   }
 
   signIn(user) {
-    return this.http.post('https://getserved20181024044343.azurewebsites.net/login', user);
+    return this.http.post(this.url +'login', user);
   }
 
   signUp(user) {
-    return this.http.post('https://getserved20181024044343.azurewebsites.net/registration', user);
+    return this.http.post(this.url +'registration', user);
+  }
+
+  getRestorant(){
+    return this.http.get(this.url +'restaurants');
   }
 
 }

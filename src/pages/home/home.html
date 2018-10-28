@@ -70,24 +70,8 @@
 
             <ion-slides slidesPerView="2.2">
 
-              <ion-slide>
-                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
-              </ion-slide>
-
-              <ion-slide>
-                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
-              </ion-slide>
-
-              <ion-slide>
-                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
-              </ion-slide>
-
-              <ion-slide>
-                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
-              </ion-slide>
-
-              <ion-slide>
-                <restaurant-recommendation (click)="openRestaurantDetails()"></restaurant-recommendation>
+              <ion-slide *ngFor="let item of dataRestaurant">
+                <restaurant-recommendation [data]='item' (click)="openRestaurantDetails(item)"></restaurant-recommendation>
               </ion-slide>
 
             </ion-slides>
